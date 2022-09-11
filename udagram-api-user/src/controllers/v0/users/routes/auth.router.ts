@@ -9,6 +9,7 @@ import {NextFunction} from 'connect';
 
 import * as EmailValidator from 'email-validator';
 import {config} from 'bluebird';
+import { genID } from '../../../../utils/genID';
 
 const router: Router = Router();
 
@@ -53,47 +54,70 @@ router.get('/verification',
     });
 
 router.post('/login', async (req: Request, res: Response) => {
+    //logging request Time
+    let reqID = await genID();
+    console.log(new Date().toLocaleString() + `: ${reqID} - request Made to login user`);
   const email = req.body.email;
   const password = req.body.password;
 
   if (!email || !EmailValidator.validate(email)) {
+      // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - request completed login error`);
     return res.status(400).send({auth: false, message: 'Email is required or malformed.'});
   }
 
   if (!password) {
+          // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - request completed login error`);
     return res.status(400).send({auth: false, message: 'Password is required.'});
   }
 
   const user = await User.findByPk(email);
   if (!user) {
+          // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - request completed login error`);
     return res.status(401).send({auth: false, message: 'User was not found..'});
   }
 
   const authValid = await comparePasswords(password, user.passwordHash);
 
   if (!authValid) {
+          // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - request completed login error`);
     return res.status(401).send({auth: false, message: 'Password was invalid.'});
   }
 
   const jwt = generateJWT(user);
+        // loging response
+        console.log(new Date().toLocaleString() + `: ${reqID} - request completed user logged in`);
   res.status(200).send({auth: true, token: jwt, user: user.short()});
 });
 
 
 router.post('/', async (req: Request, res: Response) => {
+    //logging request Time
+    let reqID = await genID();
+    console.log(new Date().toLocaleString() + `: ${reqID} - request Made to create user`);
+
   const email = req.body.email;
   const plainTextPassword = req.body.password;
 
   if (!email || !EmailValidator.validate(email)) {
+      // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - User not created error`);
     return res.status(400).send({auth: false, message: 'Email is missing or malformed.'});
   }
 
   if (!plainTextPassword) {
+          // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - User not created error`);
     return res.status(400).send({auth: false, message: 'Password is required.'});
   }
 
   const user = await User.findByPk(email);
   if (user) {
+          // loging response
+  console.log(new Date().toLocaleString() + `: ${reqID} - User not created error`);
     return res.status(422).send({auth: false, message: 'User already exists.'});
   }
 
@@ -108,6 +132,8 @@ router.post('/', async (req: Request, res: Response) => {
 
 
   const jwt = generateJWT(savedUser);
+        // loging response
+        console.log(new Date().toLocaleString() + `: ${reqID} - request completed User Created successfully`);
   res.status(201).send({token: jwt, user: savedUser.short()});
 });
 

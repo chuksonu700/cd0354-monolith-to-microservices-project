@@ -11,9 +11,8 @@ import {config} from './config/config';
 import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
 // import "dotenv/config";
 
-console.log("db:",config.password);
+
 (async () => {
-  console.log("db22:",config.password);
   await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.addModels(V0_USER_MODELS);
 
@@ -49,6 +48,7 @@ console.log("db:",config.password);
 
   // Start the Server
   app.listen( port, () => {
+    console.log(new Date());
     console.log( `server running ${config.url}` );
     console.log( `press CTRL+C to stop server` );
   } );

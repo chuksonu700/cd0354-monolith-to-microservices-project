@@ -1,4 +1,4 @@
-import "dotenv/config";
+// import "dotenv/config";
 import cors from 'cors';
 import express from 'express';
 import {sequelize} from './sequelize';
@@ -9,15 +9,13 @@ import bodyParser from 'body-parser';
 import {config} from './config/config';
 import { V0_USER_MODELS} from './controllers/v0/model.index';
 
-
-
 (async () => {
   await sequelize.addModels(V0_USER_MODELS);
   console.debug("Initialize database connection...");
   await sequelize.sync();
 
   const app = express();
-  const port = process.env.PORT || 8090;
+  const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
 
@@ -37,13 +35,7 @@ import { V0_USER_MODELS} from './controllers/v0/model.index';
 
   app.use('/api/v0/', IndexRouter);
 
-  // Root URI call
-  app.get( '/', async ( req, res ) => {
-    res.send( '/api/v0/' );
-  } );
-
-
-  // Start the Server
+    // Start the Server
   app.listen( port, () => {
     console.log( `server running ${config.url}` );
     console.log( `press CTRL+C to stop server` );
