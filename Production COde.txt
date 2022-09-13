@@ -1,0 +1,22 @@
+security
+Restrict access using CORS only our machine can communicate with our database 
+any other server blocked; no plain text password
+
+
+
+scaliing 
+Application should scale effectively a
+
+Availability
+Always avaliable
+
+Reverse Proxy
+A simple interface our client or consumer can interact with and not know what behind it 
+e.g a hotel help desk that answer all customer request from Restaurant to ICT need to Toilets etc.
+usefull for abstracting micro-service to look like one service.
+
+eksctl create cluster -n rever -r us-east-1 --without-nodegroup
+
+eksctl create cluster -n udacity-demo -r us-east-1 --without-nodegroup --vpc-public-subnets
+
+aws eks updateconfig --region us-east-1 --name udacity-demo

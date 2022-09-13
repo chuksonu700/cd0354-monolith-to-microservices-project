@@ -1,0 +1,27 @@
+kubectl get pods show list of pods
+kubectl describe services 
+kubectl cluster-info
+kubectl exec --stdin --tty simple-express-app-74bc956ccf-lp8rr -- /bin/bash
+
+ps auxview process runnig inl linux
+
+kubectl exec --stdit simple-express-app-74bc956ccf-lp8rr sh
+
+kubectl taint nodes  mildevkub020 node-role.kubernetes.io/master-
+
+kubectl get services
+
+kubectl autoscale deployment app-name --cpu-percent=70 --min=1 --max=5
+
+kubectl get hpa #get horizontal pod scalig
+
+kubectl autoscale deployment <NAME in deployment file> --cpu-percent=<CPU_PERCENTAGE>                --min=<MIN_REPLICAS>
+--max=<MAX_REPLICAS>
+
+logging
+1.use timestamps
+2. use a consistent partten
+3. use process id to trace which process is having issues
+4. rotate logs so they don't filll up space
+5. include stack trace in logs
+6. use the timestamp  of logs to calculate execution.

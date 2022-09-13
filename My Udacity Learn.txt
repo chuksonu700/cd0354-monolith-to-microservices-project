@@ -1,0 +1,8 @@
+1. EC2 an instance.
+	Volumes EBS, for storing, 
+	Virtual Private Cloud for adding security,
+	Lambda for serveless i.e autoating for autorun
+	Elastic Beam
+	s3 bucket for storeage,
+	MFA multi factor Authentication 
+	IAM identity Access Management.
