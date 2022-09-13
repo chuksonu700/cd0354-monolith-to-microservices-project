@@ -18,6 +18,7 @@ kubectl get hpa #get horizontal pod scalig
 kubectl autoscale deployment <NAME in deployment file> --cpu-percent=<CPU_PERCENTAGE>                --min=<MIN_REPLICAS>
 --max=<MAX_REPLICAS>
 
+eksctl create cluster --region=us-east-1 --zones=us-east-1a,us-east-1b,us-east-1d -n chuks-ud
 logging
 1.use timestamps
 2. use a consistent partten
