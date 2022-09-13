@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: udagram-micro-services
+data:
+  # property-like keys; each key maps to a simple value
+  POSTGRES_DB: "udagramdb"
+  URL: "http://localhost:8100"
+  POSTGRES_HOST: "udagramdb.cfctyhh7qm8e.us-east-1.rds.amazonaws.com"
+  AWS_PROFILE: "new-micro-services"
+  AWS_REGION: "us-east-1"
+  JWT_SECRET: "Secretevssvdvsdvdvsd"
+  AWS_BUCKET: "fro-cli-vs-micro-services"
