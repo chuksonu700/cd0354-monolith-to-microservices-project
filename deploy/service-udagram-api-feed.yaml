@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: udagram-api-feed
-  name: udagram-api-feed
+  name: backend-feed
   namespace: default
   selfLink: /api/v1/namespaces/default/services/udagram-api-feed-svc
 spec:
