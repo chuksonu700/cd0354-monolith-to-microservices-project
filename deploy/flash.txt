@@ -1,0 +1,325 @@
+Name:         udagram-api-feed-7d57fb64cc-9h8ql
+Namespace:    default
+Priority:     0
+Node:         ip-192-168-11-199.ec2.internal/192.168.11.199
+Start Time:   Thu, 15 Sep 2022 00:26:28 +0100
+Labels:       app=udagram-api-feed
+              pod-template-hash=7d57fb64cc
+Annotations:  kubernetes.io/psp: eks.privileged
+Status:       Running
+IP:           192.168.3.14
+IPs:
+  IP:           192.168.3.14
+Controlled By:  ReplicaSet/udagram-api-feed-7d57fb64cc
+Containers:
+  udagram-api-feed:
+    Container ID:   docker://4327475ada8a8223574b33d50c3649f561d91015b7448a3ec45648eb39d78931
+    Image:          chuksonu/udagram-api-feed
+    Image ID:       docker-pullable://chuksonu/udagram-api-feed@sha256:5cdbe0f99e6d237dc4acec61cac12a8a245616d757b88d1a0246c0233824a31d
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 15 Sep 2022 00:27:44 +0100
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 15 Sep 2022 00:26:52 +0100
+      Finished:     Thu, 15 Sep 2022 00:27:43 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     500m
+      memory:  1600Mi
+    Requests:
+      cpu:        500m
+      memory:     900Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tnrf2 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-tnrf2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age                From               Message
+  ----    ------     ----               ----               -------
+  Normal  Scheduled  86s                default-scheduler  Successfully assigned default/udagram-api-feed-7d57fb64cc-9h8ql to ip-192-168-11-199.ec2.internal
+  Normal  Pulled     62s                kubelet            Successfully pulled image "chuksonu/udagram-api-feed" in 22.911121586s
+  Normal  Pulling    10s (x2 over 85s)  kubelet            Pulling image "chuksonu/udagram-api-feed"
+  Normal  Created    10s (x2 over 62s)  kubelet            Created container udagram-api-feed
+  Normal  Started    10s (x2 over 62s)  kubelet            Started container udagram-api-feed
+  Normal  Pulled     10s                kubelet            Successfully pulled image "chuksonu/udagram-api-feed" in 155.029319ms
+
+
+Name:         udagram-api-feed-7d57fb64cc-9mqsd
+Namespace:    default
+Priority:     0
+Node:         ip-192-168-45-253.ec2.internal/192.168.45.253
+Start Time:   Thu, 15 Sep 2022 00:26:28 +0100
+Labels:       app=udagram-api-feed
+              pod-template-hash=7d57fb64cc
+Annotations:  kubernetes.io/psp: eks.privileged
+Status:       Running
+IP:           192.168.42.88
+IPs:
+  IP:           192.168.42.88
+Controlled By:  ReplicaSet/udagram-api-feed-7d57fb64cc
+Containers:
+  udagram-api-feed:
+    Container ID:   docker://afbc034c255bb02671b684e6ba9df4c5b7adaa0ada24d861e02f55d27f9f09c9
+    Image:          chuksonu/udagram-api-feed
+    Image ID:       docker-pullable://chuksonu/udagram-api-feed@sha256:5cdbe0f99e6d237dc4acec61cac12a8a245616d757b88d1a0246c0233824a31d
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 15 Sep 2022 00:27:45 +0100
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 15 Sep 2022 00:26:52 +0100
+      Finished:     Thu, 15 Sep 2022 00:27:44 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     500m
+      memory:  1600Mi
+    Requests:
+      cpu:        500m
+      memory:     900Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-kzvsj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-kzvsj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age                From               Message
+  ----    ------     ----               ----               -------
+  Normal  Scheduled  87s                default-scheduler  Successfully assigned default/udagram-api-feed-7d57fb64cc-9mqsd to ip-192-168-45-253.ec2.internal
+  Normal  Pulled     63s                kubelet            Successfully pulled image "chuksonu/udagram-api-feed" in 22.840636492s
+  Normal  Pulling    10s (x2 over 86s)  kubelet            Pulling image "chuksonu/udagram-api-feed"
+  Normal  Created    10s (x2 over 63s)  kubelet            Created container udagram-api-feed
+  Normal  Started    10s (x2 over 63s)  kubelet            Started container udagram-api-feed
+  Normal  Pulled     10s                kubelet            Successfully pulled image "chuksonu/udagram-api-feed" in 111.455831ms
+
+
+Name:         udagram-api-user-5b9d67b47d-m5sx4
+Namespace:    default
+Priority:     0
+Node:         ip-192-168-13-9.ec2.internal/192.168.13.9
+Start Time:   Thu, 15 Sep 2022 00:26:33 +0100
+Labels:       app=udagram-api-user
+              pod-template-hash=5b9d67b47d
+Annotations:  kubernetes.io/psp: eks.privileged
+Status:       Running
+IP:           192.168.1.185
+IPs:
+  IP:           192.168.1.185
+Controlled By:  ReplicaSet/udagram-api-user-5b9d67b47d
+Containers:
+  udagram-api-user:
+    Container ID:   docker://e79f9421762b024c050f316ff1ef9a1504569b55168f733abe824b7f795b5871
+    Image:          chuksonu/udagram-api-user
+    Image ID:       docker-pullable://chuksonu/udagram-api-user@sha256:4a2588cc76602bf18afa913fef562fc9afb13f7c2f3f849f0c0dbc5952edc489
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 15 Sep 2022 00:27:35 +0100
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 15 Sep 2022 00:26:58 +0100
+      Finished:     Thu, 15 Sep 2022 00:27:34 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     700m
+      memory:  1600Mi
+    Requests:
+      cpu:        500m
+      memory:     900Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9f7kg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-9f7kg:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age                From               Message
+  ----    ------     ----               ----               -------
+  Normal  Scheduled  83s                default-scheduler  Successfully assigned default/udagram-api-user-5b9d67b47d-m5sx4 to ip-192-168-13-9.ec2.internal
+  Normal  Pulled     59s                kubelet            Successfully pulled image "chuksonu/udagram-api-user" in 23.222140367s
+  Normal  Pulling    21s (x2 over 82s)  kubelet            Pulling image "chuksonu/udagram-api-user"
+  Normal  Created    21s (x2 over 58s)  kubelet            Created container udagram-api-user
+  Normal  Started    21s (x2 over 58s)  kubelet            Started container udagram-api-user
+  Normal  Pulled     21s                kubelet            Successfully pulled image "chuksonu/udagram-api-user" in 113.616195ms
+
+
+Name:         udagram-frontend-6967dbd5b5-fktmq
+Namespace:    default
+Priority:     0
+Node:         ip-192-168-51-240.ec2.internal/192.168.51.240
+Start Time:   Thu, 15 Sep 2022 00:26:39 +0100
+Labels:       app=udagram-frontend
+              pod-template-hash=6967dbd5b5
+Annotations:  kubernetes.io/psp: eks.privileged
+Status:       Running
+IP:           192.168.42.42
+IPs:
+  IP:           192.168.42.42
+Controlled By:  ReplicaSet/udagram-frontend-6967dbd5b5
+Containers:
+  udagram-frontend:
+    Container ID:   docker://84c24dd1a081a65aa4ffa8a21afcf81c5a33d6b273846911009f7459ed74002a
+    Image:          chuksonu/udagram-frontend
+    Image ID:       docker-pullable://chuksonu/udagram-frontend@sha256:db7249f1ff51420bc80aebd789212baeffc86a965363c3cda7aa4171c6dda344
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 15 Sep 2022 00:26:42 +0100
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  900Mi
+    Requests:
+      cpu:        250m
+      memory:     100Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-898ln (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-898ln:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  79s   default-scheduler  Successfully assigned default/udagram-frontend-6967dbd5b5-fktmq to ip-192-168-51-240.ec2.internal
+  Normal  Pulling    78s   kubelet            Pulling image "chuksonu/udagram-frontend"
+  Normal  Pulled     76s   kubelet            Successfully pulled image "chuksonu/udagram-frontend" in 1.573971988s
+  Normal  Created    76s   kubelet            Created container udagram-frontend
+  Normal  Started    76s   kubelet            Started container udagram-frontend
+
+
+Name:         udagram-reverseproxy-9b777c65f-xwr6x
+Namespace:    default
+Priority:     0
+Node:         ip-192-168-20-198.ec2.internal/192.168.20.198
+Start Time:   Thu, 15 Sep 2022 00:26:44 +0100
+Labels:       app=udagram-reverseproxy
+              pod-template-hash=9b777c65f
+Annotations:  kubernetes.io/psp: eks.privileged
+Status:       Running
+IP:           192.168.24.83
+IPs:
+  IP:           192.168.24.83
+Controlled By:  ReplicaSet/udagram-reverseproxy-9b777c65f
+Containers:
+  udagram-reverseproxy:
+    Container ID:   docker://c331181d2ee8a8184876556420d0dfa4bac3bc4da05c14aea3afe602fee8ee1b
+    Image:          chuksonu/udagram-reverseproxy
+    Image ID:       docker-pullable://chuksonu/udagram-reverseproxy@sha256:2b626b0902c457065d61c5ea1404465ddf9c1f1235334c1e358552b35507a308
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Thu, 15 Sep 2022 00:27:29 +0100
+      Finished:     Thu, 15 Sep 2022 00:27:29 +0100
+    Ready:          False
+    Restart Count:  3
+    Limits:
+      cpu:     500m
+      memory:  900Mi
+    Requests:
+      cpu:        250m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-cctpz (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-cctpz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  74s                default-scheduler  Successfully assigned default/udagram-reverseproxy-9b777c65f-xwr6x to ip-192-168-20-198.ec2.internal
+  Normal   Pulled     71s                kubelet            Successfully pulled image "chuksonu/udagram-reverseproxy" in 1.338262645s
+  Normal   Pulled     71s                kubelet            Successfully pulled image "chuksonu/udagram-reverseproxy" in 147.123986ms
+  Normal   Pulled     54s                kubelet            Successfully pulled image "chuksonu/udagram-reverseproxy" in 101.119295ms
+  Normal   Created    29s (x4 over 71s)  kubelet            Created container udagram-reverseproxy
+  Normal   Started    29s (x4 over 71s)  kubelet            Started container udagram-reverseproxy
+  Normal   Pulling    29s (x4 over 73s)  kubelet            Pulling image "chuksonu/udagram-reverseproxy"
+  Normal   Pulled     29s                kubelet            Successfully pulled image "chuksonu/udagram-reverseproxy" in 124.532722ms
+  Warning  BackOff    3s (x7 over 70s)   kubelet            Back-off restarting failed container

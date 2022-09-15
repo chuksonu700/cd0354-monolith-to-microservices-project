@@ -1,7 +1,7 @@
 kubectl get pods show list of pods
 kubectl describe services 
 kubectl cluster-info
-kubectl exec --stdin --tty simple-express-app-74bc956ccf-lp8rr -- /bin/bash
+kubectl exec --stdin --tty udagram-api-feed-7597c5f6c7-gxsdp -- sh
 
 ps auxview process runnig inl linux
 

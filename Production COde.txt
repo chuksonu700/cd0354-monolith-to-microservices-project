@@ -19,4 +19,4 @@ eksctl create cluster -n rever -r us-east-1 --without-nodegroup
 
 eksctl create cluster -n udacity-demo -r us-east-1 --without-nodegroup --vpc-public-subnets
 
-aws eks updateconfig --region us-east-1 --name udacity-demo
+aws eks updateconfig --region us-east-1 --name udagram-micro-services
