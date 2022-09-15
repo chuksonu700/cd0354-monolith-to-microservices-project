@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: udagram-frontend
-  name: udagram-frontend-svc
+  name: udagram-frontend
   namespace: default
   selfLink: /api/v1/namespaces/default/services/udagram-frontend-svc
 spec:
