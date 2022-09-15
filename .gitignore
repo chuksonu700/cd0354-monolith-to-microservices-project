@@ -1,5 +1,7 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
+env-secret.yaml
+aws-secret.yaml
 
 *~
 *.sw[mnpcod]
