@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/whitelist-source-range: 49.36.X.X/32
+  #   # depending on the ingress controller version the annotation above may need to be modified to remove the prefix nginx. i.e. ingress.kubernetes.io/whitelist-source-range: 49.36.X.X/32spec:
+spec:
+  rules:
+  - host: web.manitestdomain.com
+    http:
+      paths:
+      - path: /(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: web
+            port:
+              number: 80

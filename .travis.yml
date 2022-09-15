@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend chuksonu/udagram-frontend:prod-done
+  - docker tag udagram-frontend chuksonu/udagram-frontend
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   - docker tag udagram-reverseproxy chuksonu/udagram-reverseproxy
   - docker build -t udagram-api-user ./udagram-api-user
@@ -26,7 +26,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push chuksonu/udagram-frontend
+  - docker push chuksonu/udagram-frontend:prod-done
   - docker push chuksonu/udagram-reverseproxy
   - docker push chuksonu/udagram-api-user
   - docker push chuksonu/udagram-api-feed
