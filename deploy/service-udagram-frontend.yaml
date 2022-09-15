@@ -8,9 +8,9 @@ metadata:
   selfLink: /api/v1/namespaces/default/services/udagram-frontend-svc
 spec:
   ports:
-  - port: 8080
+  - port: 8100
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
   selector:
     app: udagram-frontend
   sessionAffinity: None
