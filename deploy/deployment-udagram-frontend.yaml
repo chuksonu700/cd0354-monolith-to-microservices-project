@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: chuksonu/udagram-frontend
+        image: chuksonu/udagram-frontend:prod-done
         imagePullPolicy: Always          
         resources:
           requests:
